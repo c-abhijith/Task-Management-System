@@ -1,5 +1,4 @@
 # Django Project with DRF & Template Rendering
-This project integrates Django
 
 This project integrates Django REST Framework (DRF) and traditional template rendering. You can access the login page via a browser, or interact with the API using Postman.
 
@@ -75,3 +74,18 @@ This project integrates Django REST Framework (DRF) and traditional template ren
 
 ## Docker commands 
         -  docker-compose up --build
+
+## Images
+![1758023114268](image/README/1758023114268.png)
+
+
+![1758023128632](image/README/1758023128632.png)
+
+
+
+![1758023139924](image/README/1758023139924.png)
+
+
+
+
+![1758023153335](image/README/1758023153335.png)
