@@ -10,14 +10,14 @@ from taskmanager.views.task_assign_views import (
 from taskmanager.views.task_views import create_task, task_list
 from rest_framework_simplejwt.views import TokenRefreshView
 from taskmanager.views.user_auth_views import CustomTokenObtainPairView
-from taskmanager.views.user_task_views import UserTaskViewSet
+from taskmanager.views.user_task_views import TaskViewSet,TaskReportViewSet
 
 router = DefaultRouter()
 
-router.register(r'user/tasks', UserTaskViewSet, basename='user-tasks')
+router.register(r'tasks', TaskViewSet, basename='user-tasks')
 
 urlpatterns = [
-    # Template routes
+    # Template 
     path('login/', login_page, name='login_page'),
     path('adminpanel/', admin_panel, name='admin_panel'),
     path('userpanel/', user_panel, name='user_panel'),
@@ -38,4 +38,5 @@ urlpatterns = [
 
     # DRF router endpoints
     path('', include(router.urls)),
+    path("tasks/<uuid:id>/reports/", TaskReportViewSet.as_view({"get": "retrieve"}), name="task-report"),
 ]

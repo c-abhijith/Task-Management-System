@@ -4,17 +4,16 @@ This project integrates Django
 This project integrates Django REST Framework (DRF) and traditional template rendering. You can access the login page via a browser, or interact with the API using Postman.
 
 
-## postman documention : https://documenter.getpostman.com/view/44984967/2sB3HqJK7j
-
+## postman documention : https://documenter.getpostman.com/view/44984967/2sB3HqJK7j#d45695bd-eec4-467c-a9c0-5b786dc849c3
 ## Dockerhub link: 
 
-## Github link: https://github.com/c-abhijith/Employee-Task-Management-System.git
+## Github link: https://github.com/c-abhijith/Task-Management-System.git
 
 ## SETUP INSTRUCTIONS:
     Clone gitrepo:
-                git clone https://github.com/c-abhijith/Employee-Task-Management-System.git
+                git clone https://github.com/c-abhijith/Task-Management-System.git
                 
-                cd Employee-Task-Management-System
+                cd Task-Management-System
 
     For Linux or macOS users:
                 Run the following commands in your terminal:
@@ -49,8 +48,8 @@ This project integrates Django REST Framework (DRF) and traditional template ren
 ## RestURL
 
         please follow postman url
-        https://documenter.getpostman.com/view/44984967/2sB3HqJK7j
 
+        https://documenter.getpostman.com/view/44984967/2sB3HqJK7j#d45695bd-eec4-467c-a9c0-5b786dc849c3
 
 
 

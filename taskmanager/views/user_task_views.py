@@ -9,7 +9,7 @@ from taskmanager.models import Task,Role
 from taskmanager.serializers import TaskSerializer, TaskUpdateSerializer
 
 
-class UserTaskViewSet(viewsets.ViewSet):
+class TaskViewSet(viewsets.ViewSet):
     
     authentication_classes = [JWTAuthentication]
     permission_classes = [IsAuthenticated]
@@ -79,3 +79,38 @@ class UserTaskViewSet(viewsets.ViewSet):
         except Exception as e:
             return Response({"detail": "Something went wrong.", "error": str(e)},
                             status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+
+
+class TaskReportViewSet(viewsets.ViewSet):
+    lookup_field = "id"
+
+    def retrieve(self, request, id=None):
+        try:
+            task = get_object_or_404(Task, id=id)
+
+            report = {
+                "task_id": str(task.id),
+                "title": getattr(task, "title", None),
+                "status": getattr(task, "status", None),
+                "assigned_to": getattr(getattr(task, "assigned_to", None), "username", None),
+                "created_by": getattr(getattr(task, "created_by", None), "username", None),
+                "created_at": getattr(task, "created_at", None),
+                "started_at": getattr(task, "started_at", None),
+                "completed_at": getattr(task, "completed_at", None),
+                "duration_minutes": None,
+                "summary": getattr(task, "summary", None) or getattr(task, "description", None)
+            }
+
+            if getattr(task, "started_at", None) and getattr(task, "completed_at", None):
+                delta = task.completed_at - task.started_at
+                report["duration_minutes"] = int(delta.total_seconds() // 60)
+
+            return Response(report, status=status.HTTP_200_OK)
+
+        except Exception as e:
+            return Response(
+                {"detail": "Something went wrong creating the report.", "error": str(e)},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            )
