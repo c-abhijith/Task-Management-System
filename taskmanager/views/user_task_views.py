@@ -68,9 +68,7 @@ class UserTaskViewSet(viewsets.ViewSet):
                             status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
     def partial_update(self, request, id=None):
-        """
-        PATCH: mark status -> 'InProgress' (no payload required)
-        """
+       
         try:
             denied = self._check_user_role(request)
             if denied: return denied

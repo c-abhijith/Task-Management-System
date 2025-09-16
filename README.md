@@ -1,12 +1,21 @@
-Django Project with DRF & Template Rendering
+# Django Project with DRF & Template Rendering
 This project integrates Django
 
 This project integrates Django REST Framework (DRF) and traditional template rendering. You can access the login page via a browser, or interact with the API using Postman.
 
 
-postman documention :
+## postman documention :https://documenter.getpostman.com/view/44984967/2sB3HqJK7j
 
-SETUP INSTRUCTIONS:
+## Dockerhub link: 
+
+## Github link:https://github.com/c-abhijith/Employee-Task-Management-System.git
+
+## SETUP INSTRUCTIONS:
+    Clone gitrepo:
+                git clone https://github.com/c-abhijith/Employee-Task-Management-System.git
+                
+                cd Employee-Task-Management-System
+
     For Linux or macOS users:
                 Run the following commands in your terminal:
                                 make env-setup
@@ -38,7 +47,7 @@ LoginUrl:http://127.0.0.1:8000/login/
 
 
 
-You can create a superuser using the following command:         
+## You can create a superuser using the following command:         
 
             python manage.py createsuperuser
     
@@ -46,9 +55,15 @@ You can create a superuser using the following command:
 
 
                 username : Superuser
-                password : Superuser@123
+                password : Password
+
+## Admin and User password
+
+                password : password
+
+        
 
 ## TestCase
-        python manage.py test
-        
-Docker commands :  docker-compose up --build
+
+## Docker commands 
+        -  docker-compose up --build
