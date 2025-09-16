@@ -76,16 +76,11 @@ This project integrates Django REST Framework (DRF) and traditional template ren
         -  docker-compose up --build
 
 ## Images
-![1758023114268](image/README/1758023114268.png)
+### Super user home page 
+
+![1758023334635](image/README/1758023334635.png)
 
 
-![1758023128632](image/README/1758023128632.png)
+### Assing user into the addmin
 
-
-
-![1758023139924](image/README/1758023139924.png)
-
-
-
-
-![1758023153335](image/README/1758023153335.png)
+![1758023362278](image/README/1758023362278.png)
