@@ -84,3 +84,10 @@ This project integrates Django REST Framework (DRF) and traditional template ren
 ### Assing user into the addmin
 
 ![1758023362278](image/README/1758023362278.png)
+
+### Show Tasks
+![1758023431110](image/README/1758023431110.png)
+
+### Show Reports
+
+![1758023453646](image/README/1758023453646.png)
