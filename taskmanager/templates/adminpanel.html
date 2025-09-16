@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Admin Panel{% endblock %}
+
+{% block content %}
+<div class="admin-actions">
+  <ul class="action-buttons">
+    <li>
+      <a href="#" id="usersButton" class="mui-btn mui-btn--raised users-btn">Users</a>
+    </li>
+    {% if request.user.role == 'SUPERUSER' %}
+    <li>
+      <a href="#" id="adminButton" class="mui-btn mui-btn--raised admins-btn">Admins</a>
+    </li>
+    <li>
+      <a href="{% url 'assign_user' %}" id="assignUserButton" class="mui-btn mui-btn--raised assign-btn">Assign User</a>
+    </li>
+    {% endif %}
+    <li>
+      <a href="{% url 'task_list' %}" class="mui-btn mui-btn--raised task-btn">Task Details</a>
+    </li>
+  </ul>
+</div>
+
+<div id="usersList" class="list-section">
+  {% include "user_list.html" %}
+</div>
+
+<div id="adminList" class="list-section" style="display: none;">
+  {% include "admin_list.html" %}
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/admin_panel.js' %}"></script>
+{% endblock %}

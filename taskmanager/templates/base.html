@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link href="{% static 'css/login.css' %}" rel="stylesheet">
+    <link href="https://cdn.muicss.com/mui-0.10.3/css/mui.min.css" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div class="top-nav">
+        <h2 class="logo">TaskManager</h2>
+        {% if request.user.is_authenticated %}
+        <div class="user-info">
+            <span class="username">@{{ request.user.username }}</span>
+            <a href="{% url 'logout' %}" class="mui-btn mui-btn--raised logout-btn">Logout</a>
+        </div>
+        {% endif %}
+    </div>
+
+    {% block content %}{% endblock %}
+
+    {% block extra_js %}
+    <script src="{% static 'js/script.js' %}"></script>
+    {% endblock %}
+</body>
+</html>

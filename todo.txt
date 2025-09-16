@@ -1,0 +1,46 @@
+Django project and app setup   -----> Done
+
+
+Template                           -----> Done
+    - login (only Superadmin , Admin) 
+            - admin panel
+
+    Superadmin                        -----> Done
+        - create user and Admin
+        - Assign user to Admin
+            - assinged admin and user    
+            - view users 
+            - delete users
+        - task
+            - create task (assigned user and  unassigned users)
+    Admin                             -----> Done
+        - view assigned users
+        - create task and assinged user or not assigned user
+        - reassigned user or assigned user
+        - Add filter status and not assigned users
+
+ 
+
+
+APi
+    
+        - use simple jwt for User Autherization     -----> Done
+        - using viewset for                         -----> Done
+            - fetched all task based on logged user
+            - change task changes(with Working hr and Report)
+            - 
+
+implement Docker   ----> Done
+
+
+Postman Docs
+
+
+Test Cased
+    - APi
+    - Templates
+
+
+Swagger Docs
+
+
